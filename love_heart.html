@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        @keyframes bigHeart {
+            from{}
+            to{
+                transform: scale(1.2,1.2);
+            }
+        }
+        @keyframes heartShadow {
+            from{}
+            to{
+                box-shadow: 0 0 80px pink;
+            }
+        }
+        body{
+            background-color: black;
+        }
+        .heart{
+            width: 300px;
+            height: 300px;
+            /*border: 1px solid #000;*/
+            margin:150px auto;
+            position: relative;
+            animation: bigHeart .5s infinite alternate;
+        }
+        .heart div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            animation: heartShadow .5s infinite alternate;
+        }
+        .left{
+            border-radius: 50%;
+        }
+        .right{
+            right: 0px;
+            border-radius: 50%;
+        }
+        .bottom{
+            bottom: 29px;
+            left: 50px;
+            transform: rotate(45deg) scale(.85,.85);
+        }
+    </style>
+</head>
+<body>
+<div class="heart">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+</div>
+</body>
+</html>
